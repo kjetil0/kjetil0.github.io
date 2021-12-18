@@ -80,3 +80,40 @@ c.strokeText("Vedbjørn da", 80, 730);
 c.strokeText("And da", 130, 730);
 c.strokeText("Juul da", 180, 730);
 
+const countdown = () => {
+    // legger inn datoen til en dato man kan velge selv med getTime
+    const countDate = new Date("December 24, 2021 00:00:00").getTime();
+    // henter inn tiden fra nåtid med new Date som ikke er satt til noe
+    const now = new Date().getTime();
+    // regner på forskjellen på de to. Det er regnet i milisek. Det er derfor 
+    const gap = countDate - now;
+
+
+    // converterer fra milisek til sekund
+    const second = 1000;
+    // fra sekund til minutt
+    const minute = second * 60;
+    // fra minutt til time
+    const hour = minute * 60;
+    // og til slutt til dag
+    const day = hour * 24;
+
+    // tar å deler på gap og dag Math.floor tar bort det som er 
+    const textDay = Math.floor(gap / day);
+    // modulo tar restene av gap / day og deler på time
+    const textHour = Math.floor((gap % day) / hour);
+    const textMinute = Math.floor((gap % hour) / minute);
+    const textSecond = Math.floor((gap % minute) / second);
+
+    document.querySelector(".day").innerText = textDay
+    document.querySelector(".hour").innerText = textHour
+    document.querySelector(".minute").innerText = textMinute
+    document.querySelector(".second").innerText = textSecond
+    
+
+};
+
+
+
+
+setInterval(countdown, 1000);
