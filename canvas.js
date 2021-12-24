@@ -20,7 +20,7 @@ c.fillRect(100, 200, 100, 500);
 c.fillStyle = "rgba(0,255,0,0.5)";
 c.fillRect(150, 100, 100, 600);
 
-c.fillStyle= "rgba(200,255,110,0.5)"
+c.fillStyle= "rgba(150,255,150,0.7)"
 c.fillRect(200, 300, 100, 400);
 
 //lag en linje:
@@ -28,7 +28,7 @@ c.beginPath();
 c.moveTo(40,50);
 c.lineTo(40,710);
 
-c.strokeStyle = "teal";
+c.strokeStyle = "black";
 c.stroke();
 
 c.beginPath
@@ -77,8 +77,8 @@ c.stroke();
 // tekst
 c.font = "16px Arial";
 c.strokeText("Vedbjørn da", 80, 730);
-c.strokeText("And da", 130, 730);
-c.strokeText("Juul da", 180, 730);
+c.strokeText("Krykkerud da", 180, 730);
+c.strokeText("Juul da", 300, 730);
 
 const countdown = () => {
     // legger inn datoen til en dato man kan velge selv med getTime
