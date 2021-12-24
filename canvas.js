@@ -82,7 +82,7 @@ c.strokeText("Juul da", 180, 730);
 
 const countdown = () => {
     // legger inn datoen til en dato man kan velge selv med getTime
-    const countDate = new Date("December 24, 2021 00:00:00").getTime();
+    const countDate = new Date("December 26, 2021 00:00:00").getTime();
     // henter inn tiden fra nåtid med new Date som ikke er satt til noe
     const now = new Date().getTime();
     // regner på forskjellen på de to. Det er regnet i milisek. Det er derfor 
